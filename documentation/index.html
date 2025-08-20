@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação Dashboard de Vendas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8IS0tIEJhY2tncm91bmQgLS0+CiAgPHJlY3Qgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiByeD0iNCIgZmlsbD0iIzNBNEI5OSIvPgogIDxyZWN0IHg9IjIiIHk9IjIiIHdpZHRoPSIyOCIgaGVpZ2h0PSIyOCIgcng9IjIiIGZpbGw9IndoaXRlIi8+CiAgCiAgPCEtLSBUb3AgTGVmdCBDb3JuZXIgLS0+CiAgPHJlY3QgeD0iNCIgeT0iNCIgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0iIzNBNEI5OSIvPgogIDxyZWN0IHg9IjYiIHk9IjYiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+CiAgPHJlY3QgeD0iOCIgeT0iOCIgd2lkdGg9IjIiIGhlaWdodD0iMiIgZmlsbD0iIzNBNEI5OSIvPgogICAgCiAgPCEtLSBUb3AgUmlnaHQgQ29ybmVyIC0tPgogIDxyZWN0IHg9IjIwIiB5PSI0IiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjM0E0Qjk5Ii8+CiAgPHJlY3QgeD0iMjIiIHk9IjYiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+CiAgPHJlY3QgeD0iMjQiIHk9IjgiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICAgIAogIDwhLS0gQm90dG9tIExlZnQgQ29ybmVyIC0tPgogIDxyZWN0IHg9IjQiIHk9IjIwIiB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjM0E0Qjk5Ii8+CiAgPHJlY3QgeD0iNiIgeT0iMjIiIHdpZHRoPSI0IiBoZWlnaHQ9IjQiIGZpbGw9IndoaXRlIi8+CiAgPHJlY3QgeD0iOCIgeT0iMjQiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICAgIAogIDwhLS0gQ2VudGVyIFBhdHRlcm4gLS0+CiAgPHJlY3QgeD0iMTQiIHk9IjE0IiB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjM0E0Qjk5Ii8+CiAgPHJlY3QgeD0iMTUiIHk9IjE1IiB3aWR0aD0iMiIgaGVpZ2h0PSIyIiBmaWxsPSJ3aGl0ZSIvPgogICAgCiAgPCEtLSBIb3Jpem9udGFsIExpbmVzIC0tPgogIDxyZWN0IHg9IjE0IiB5PSI2IiB3aWR0aD0iNCIgaGVpZ2h0PSIyIiBmaWxsPSIjM0E0Qjk5Ii8+CiAgPHJlY3QgeD0iMTQiIHk9IjI0IiB3aWR0aD0iNCIgaGVpZ2h0PSIyIiBmaWxsPSIjM0E0Qjk5Ii8+CiAgCiAgPCEtLSBWZXJ0aWNhbCBMaW5lcyAtLT4KICA8cmVjdCB4PSI2IiB5PSIxNCIgd2lkdGg9IjIiIGhlaWdodD0iNCIgZmlsbD0iIzNBNEI5OSIvPgogIDxyZWN0IHg9IjI0IiB5PSIxNCIgd2lkdGg9IjIiIGhlaWdodD0iNCIgZmlsbD0iIzNBNEI5OSIvPgogICAgCiAgPCEtLSBBZGRpdGlvbmFsIFBhdHRlcm4gRG90cyAtLT4KICA8cmVjdCB4PSIxMyIgeT0iMTEiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxNyIgeT0iMTEiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxMSIgeT0iMTMiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxOSIgeT0iMTMiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxMSIgeT0iMTciIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxOSIgeT0iMTciIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxMyIgeT0iMTkiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KICA8cmVjdCB4PSIxNyIgeT0iMTkiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiIGZpbGw9IiMzQTRCOTkiLz4KPC9zdmc+">
+    
+    <style>
+        :root {
+            /* Power BI Themed Colors */
+            --primary: #F2C811;
+            --primary-dark: #D8B000;
+            --secondary: #004B87;
+            --accent: #00BCF2;
+            --success: #107C10;
+            --warning: #FF8C00;
+            --error: #D13438;
+            
+            /* Power BI Brand Colors */
+            --powerbi-yellow: #F2C811;
+            --powerbi-blue: #004B87;
+            --powerbi-cyan: #00BCF2;
+            --powerbi-teal: #40E0D0;
+            --powerbi-purple: #6B69D6;
+            --powerbi-red: #E74856;
+            
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-tertiary: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            
+            --border-light: #e2e8f0;
+            --border-medium: #cbd5e1;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            
+            --gradient-primary: linear-gradient(135deg, #F2C811 0%, #004B87 100%);
+            --gradient-secondary: linear-gradient(135deg, #00BCF2 0%, #6B69D6 100%);
+            --gradient-accent: linear-gradient(135deg, #40E0D0 0%, #00BCF2 100%);
+        }
+
+        body.dark {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --text-muted: #94a3b8;
+            --border-light: #334155;
+            --border-medium: #475569;
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.3);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--bg-primary);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-light);
+            box-shadow: var(--shadow-md);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .logo-icon:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .logo-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: white;
+        }
+
+        .logo-text {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn:hover {
+            background: var(--bg-secondary);
+        }
+
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 1rem;
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            min-width: 100px;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background: var(--primary);
+            color: var(--secondary);
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 320px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-right: 1px solid var(--border-light);
+            overflow-y: auto;
+            padding: 6rem 0 2rem 0;
+            z-index: 999;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .sidebar.hidden {
+            transform: translateX(-100%);
+        }
+
+        .sidebar-content {
+            padding: 0 1.5rem;
+        }
+
+        .sidebar-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin: 0.5rem 0;
+        }
+
+        .nav-link {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid transparent;
+            gap: 0.75rem;
+        }
+
+        .nav-link:hover {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            border-color: var(--border-light);
+            transform: translateX(4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-link.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--primary);
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .nav-link i {
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+            color: var(--powerbi-cyan);
+        }
+
+        .nav-link.active i {
+            color: var(--powerbi-yellow);
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 320px;
+            padding: 6rem 0 4rem 0;
+            min-height: 100vh;
+            transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .main.full-width {
+            margin-left: 0;
+        }
+
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        /* Typography */
+        .section {
+            margin-bottom: 5rem;
+            scroll-margin-top: 120px;
+        }
+
+        .section h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .section h2 {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 4rem 0 2rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .section h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: var(--gradient-secondary);
+            border-radius: 3px;
+        }
+
+        .section h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--powerbi-cyan);
+            margin: 2.5rem 0 1.5rem 0;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .section h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 20px;
+            background: var(--powerbi-yellow);
+            border-radius: 2px;
+        }
+
+        .section p {
+            margin: 1.5rem 0;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 24px;
+            margin-bottom: 4rem;
+            box-shadow: var(--shadow-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            color: white;
+            margin-bottom: 1rem;
+            background: none;
+            -webkit-text-fill-color: initial;
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--bg-primary);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-accent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--powerbi-cyan);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-secondary);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .feature-card h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Professional Content Boxes */
+        .content-box {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--powerbi-cyan);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .content-box.highlight {
+            border-left-color: var(--powerbi-yellow);
+            background: linear-gradient(135deg, rgba(242, 200, 17, 0.05) 0%, transparent 50%);
+        }
+
+        .content-box.important {
+            border-left-color: var(--powerbi-red);
+            background: linear-gradient(135deg, rgba(231, 72, 86, 0.05) 0%, transparent 50%);
+        }
+
+        .content-box.success {
+            border-left-color: var(--success);
+            background: linear-gradient(135deg, rgba(16, 124, 16, 0.05) 0%, transparent 50%);
+        }
+
+        /* Enhanced Lists */
+        .professional-list {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-light);
+        }
+
+        .professional-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .professional-list li {
+            position: relative;
+            padding: 0.75rem 0 0.75rem 2.5rem;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .professional-list li:last-child {
+            border-bottom: none;
+        }
+
+        .professional-list li::before {
+            content: '';
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--powerbi-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 0 2px rgba(0, 188, 242, 0.2);
+        }
+
+        .professional-list li strong {
+            color: var(--secondary);
+        }
+
+        /* Code Blocks */
+        .code-block {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 2.5rem 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .code-header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .code-header i {
+            color: var(--powerbi-yellow);
+        }
+
+        pre {
+            padding: 2rem;
+            overflow-x: auto;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: transparent;
+            margin: 0;
+        }
+
+        code {
+            background: var(--powerbi-cyan);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+            font-size: 0.875em;
+            font-weight: 600;
+        }
+
+        /* Tables */
+        .table-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-light);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-primary);
+        }
+
+        th {
+            background: var(--secondary);
+            color: white;
+            font-weight: 600;
+            padding: 1.25rem;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 1.25rem;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        td strong {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        tbody tr:hover {
+            background: linear-gradient(135deg, rgba(0, 188, 242, 0.05) 0%, transparent 50%);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Architecture Diagram */
+        .architecture-diagram {
+            background: var(--bg-secondary);
+            border: 2px solid var(--powerbi-cyan);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .mermaid {
+            background: transparent !important;
+        }
+
+        /* Blockquotes */
+        blockquote {
+            background: var(--bg-secondary);
+            border-left: 4px solid var(--powerbi-yellow);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            box-shadow: var(--shadow-md);
+        }
+
+        blockquote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--powerbi-yellow);
+            position: absolute;
+            top: -0.5rem;
+            left: 1rem;
+            opacity: 0.3;
+        }
+
+        blockquote p {
+            color: var(--text-primary);
+            font-style: italic;
+            font-weight: 500;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhanced Links */
+        a {
+            color: var(--powerbi-cyan);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        a:hover {
+            border-bottom-color: var(--powerbi-cyan);
+            color: var(--secondary);
+        }
+
+        /* Professional Badges */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--powerbi-cyan);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+
+        .badge.primary {
+            background: var(--powerbi-yellow);
+            color: var(--secondary);
+        }
+
+        .badge.secondary {
+            background: var(--secondary);
+            color: white;
+        }
+
+        .badge.success {
+            background: var(--success);
+            color: white;
+        }
+
+        /* Status Indicators */
+        .status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            margin: 0.5rem 0;
+        }
+
+        .status-indicator::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--powerbi-cyan);
+        }
+
+        .status-indicator.success::before {
+            background: var(--success);
+        }
+
+        .status-indicator.warning::before {
+            background: var(--warning);
+        }
+
+        .status-indicator.error::before {
+            background: var(--error);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--secondary);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--powerbi-yellow);
+            font-weight: 600;
+        }
+
+        .footer a:hover {
+            border-bottom-color: var(--powerbi-yellow);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            .sidebar {
+                width: 280px;
+            }
+            
+            .main {
+                margin-left: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main {
+                margin-left: 0;
+            }
+
+            .content {
+                padding: 0 1rem;
+            }
+
+            .header-content {
+                padding: 1rem;
+            }
+
+            .hero {
+                padding: 2rem 1.5rem;
+                margin: 0 -1rem 2rem -1rem;
+                border-radius: 0;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .feature-card {
+                padding: 1.5rem;
+            }
+
+            .table-container {
+                margin: 1.5rem -1rem;
+                border-radius: 0;
+            }
+
+            .code-block {
+                margin: 1.5rem -1rem;
+                border-radius: 0;
+            }
+
+            .architecture-diagram {
+                margin: 2rem -1rem;
+                border-radius: 0;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .theme-toggle {
+                min-width: auto;
+                padding: 0.75rem;
+            }
+
+            .theme-toggle span:last-child {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-card {
+                padding: 1.25rem;
+            }
+
+            .feature-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.25rem;
+            }
+
+            th, td {
+                padding: 1rem 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--powerbi-cyan);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Mobile overlay */
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 75, 135, 0.5);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-overlay {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="#overview" class="logo">
+                <div class="logo-icon">
+                    <img src="https://i.ibb.co/6803T6q/logo-webcash.png" alt="Logo Dashboard de Vendas" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <svg viewBox="0 0 32 32" style="display: none;">
+                        <rect width="32" height="32" rx="6" fill="#004B87"/>
+                        <rect x="4" y="4" width="24" height="24" rx="2" fill="white"/>
+                        <rect x="6" y="6" width="4" height="4" fill="#004B87"/>
+                        <rect x="22" y="6" width="4" height="4" fill="#004B87"/>
+                        <rect x="6" y="22" width="4" height="4" fill="#004B87"/>
+                        <rect x="12" y="8" width="8" height="2" fill="#004B87"/>
+                        <rect x="8" y="12" width="2" height="8" fill="#004B87"/>
+                        <rect x="14" y="14" width="4" height="4" fill="#004B87"/>
+                        <rect x="20" y="12" width="2" height="8" fill="#004B87"/>
+                        <rect x="12" y="22" width="8" height="2" fill="#004B87"/>
+                    </svg>
+                </div>
+                <span class="logo-text">Dashboard de Vendas</span>
+            </a>
+            
+            <div class="header-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i id="theme-icon" class="fas fa-moon"></i>
+                    <span id="theme-text">Dark</span>
+                </button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-content">
+            <h2 class="sidebar-title">Documentação</h2>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#intro" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-book-open"></i>
+                        Introdução
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#chapter1" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-desktop"></i>
+                        Capítulo 1: Power BI Desktop
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#chapter2" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-search"></i>
+                        Capítulo 2: Fontes de Dados
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#chapter3" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-wrench"></i>
+                        Capítulo 3: Transformação de Dados
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#chapter4" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-project-diagram"></i>
+                        Capítulo 4: Modelo de Dados
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#chapter5" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-calculator"></i>
+                        Capítulo 5: DAX
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a href="#chapter6" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Capítulo 6: KPIs
+                    </a>
+                </li>
+                 <li class="nav-item">
+                    <a href="#chapter7" class="nav-link" onclick="closeMobileMenu()">
+                        <i class="fas fa-chart-bar"></i>
+                        Capítulo 7: Visualizações Interativas
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main" id="main">
+        <div class="content">
+            <section id="intro" class="section">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Documentação Dashboard de Vendas</h1>
+                        <p>Bem-vindo à documentação completa do projeto <strong>Dashboard de Vendas</strong>, uma solução avançada de Business Intelligence desenvolvida com Microsoft Power BI Desktop. Este guia técnico detalhado o conduzirá através de todos os estágios do desenvolvimento, desde a importação e tratamento de dados brutos até a criação de visualizações interativas e indicadores-chave de performance (KPIs) que transformam números em insights estratégicos para o seu negócio.</p>
+                        
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>Analytics Avançada</h4>
+                                <p>Transforme dados complexos em insights acionáveis com ferramentas de análise profissional</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4>Integração de Dados</h4>
+                                <p>Conecte múltiplas fontes de dados e crie modelos relacionais robustos</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h4>KPIs Estratégicos</h4>
+                                <p>Monitore indicadores críticos de performance em tempo real</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="chapter1" class="section">
+                <h1>Capítulo 1: Power BI Desktop - Sua Plataforma de Desenvolvimento</h1>
+                
+                <div class="content-box highlight">
+                    <p><strong>Power BI Desktop</strong> é a ferramenta central para desenvolvimento de soluções de Business Intelligence da Microsoft. Funciona como um ambiente integrado de desenvolvimento (IDE) onde você constrói, testa e otimiza seus dashboards antes da publicação.</p>
+                </div>
+
+                <h3>Arquitetura e Funcionalidades Principais</h3>
+                <p>O Power BI Desktop integra três componentes fundamentais em uma única plataforma, cada um especializado em uma fase específica do desenvolvimento de dashboards:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Vista de Relatório (Report View):</strong> Interface principal para criação e design de visualizações interativas, layouts responsivos e formatação de dashboards</li>
+                        <li><strong>Vista de Dados (Data View):</strong> Ambiente para inspeção detalhada de dados, aplicação de filtros contextuais e validação de qualidade dos datasets</li>
+                        <li><strong>Vista de Modelo (Model View):</strong> Designer visual para definição de relacionamentos entre tabelas, configuração de cardinalidades e otimização de performance do modelo de dados</li>
+                    </ul>
+                </div>
+
+                <h3>Benefícios Empresariais</h3>
+                <div class="content-box success">
+                    <p>Elimina a dependência de relatórios estáticos e planilhas limitadas, permitindo análises dinâmicas e exploração interativa de dados em tempo real. Reduz significativamente o tempo entre coleta de dados e tomada de decisão estratégica.</p>
+                </div>
+
+                <h3>Integração no Ecossistema Microsoft</h3>
+                <p>Power BI Desktop funciona como ponto de entrada para o ecossistema completo de Business Intelligence da Microsoft, integrando-se nativamente com:</p>
+                
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Power BI Service:</strong> Plataforma cloud para publicação e colaboração</li>
+                        <li><strong>Microsoft 365:</strong> Integração com Excel, SharePoint e Teams</li>
+                        <li><strong>Azure Data Services:</strong> Conectividade com serviços de dados em nuvem</li>
+                        <li><strong>SQL Server:</strong> Conexão direta com bancos de dados corporativos</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="chapter2" class="section">
+                <h1>Capítulo 2: Fontes de Dados - Fundação do Seu Dashboard</h1>
+
+                <div class="content-box">
+                    <p>As <strong>Fontes de Dados</strong> constituem a camada fundamental de qualquer solução de Business Intelligence. No Power BI, esta etapa envolve não apenas a conexão com repositórios de dados, mas também a configuração de atualizações automáticas e otimização de performance de consultas.</p>
+                </div>
+
+                <h3>Estratégia de Conectividade</h3>
+                <p>O Power BI oferece dois modos principais de conexão, cada um com implicações específicas para performance e funcionalidade:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Import Mode:</strong> Carrega dados na memória para máxima performance analítica, ideal para datasets até 1GB</li>
+                        <li><strong>DirectQuery Mode:</strong> Mantém conexão ativa com fonte original, adequado para dados em tempo real e grandes volumes</li>
+                        <li><strong>Composite Models:</strong> Combina ambas as abordagens para otimização híbrida de performance</li>
+                    </ul>
+                </div>
+
+                <h3>Categorias de Fontes de Dados Suportadas</h3>
+                
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Tipos de Fonte</th>
+                                <th>Casos de Uso Típicos</th>
+                                <th>Considerações de Performance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Arquivos Locais</strong></td>
+                                <td>Excel, CSV, JSON, XML, Parquet</td>
+                                <td>Protótipos, dados históricos, importações pontuais</td>
+                                <td>Limitado a 1GB por arquivo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Bancos de Dados</strong></td>
+                                <td>SQL Server, Oracle, MySQL, PostgreSQL</td>
+                                <td>Sistemas transacionais, data warehouses corporativos</td>
+                                <td>Otimização de consultas SQL crítica</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Serviços Cloud</strong></td>
+                                <td>Azure SQL, AWS Redshift, Google BigQuery</td>
+                                <td>Arquiteturas de dados modernas, escalabilidade</td>
+                                <td>Latência de rede considerável</td>
+                            </tr>
+                            <tr>
+                                <td><strong>APIs e Web Services</strong></td>
+                                <td>REST APIs, OData, Web Tables</td>
+                                <td>Integração com SaaS, dados em tempo real</td>
+                                <td>Rate limiting e autenticação</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Melhores Práticas para Configuração</h3>
+                <div class="content-box important">
+                    <p><strong>Segurança e Governança:</strong> Sempre configure credenciais adequadas e implemente row-level security quando necessário. Documente todas as fontes de dados para facilitar manutenção e auditoria.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Otimização de Consultas:</strong> Utilize views e stored procedures para preprocessar dados no servidor de origem</li>
+                        <li><strong>Agendamento Inteligente:</strong> Configure atualizações durante horários de baixa utilização</li>
+                        <li><strong>Monitoramento Contínuo:</strong> Implemente alertas para falhas de atualização e degradação de performance</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="chapter3" class="section">
+                <h1>Capítulo 3: Transformação de Dados com Power Query</h1>
+
+                <div class="content-box highlight">
+                    <p>O <strong>Power Query</strong> é o motor de ETL (Extract, Transform, Load) integrado do Power BI, baseado no mecanismo M language. Oferece capacidades avançadas de limpeza, transformação e enriquecimento de dados através de uma interface visual intuitiva.</p>
+                </div>
+
+                <h3>Arquitetura do Power Query Editor</h3>
+                <p>O ambiente de transformação é estruturado em componentes especializados que trabalham em conjunto para processar dados de forma eficiente:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Query Pane:</strong> Lista hierárquica de todas as consultas, parâmetros e funções do projeto</li>
+                        <li><strong>Data Preview:</strong> Visualização em tempo real dos dados durante o processo de transformação</li>
+                        <li><strong>Applied Steps:</strong> Histórico sequencial e editável de todas as transformações aplicadas</li>
+                        <li><strong>Formula Bar:</strong> Editor avançado para customização de código M language</li>
+                    </ul>
+                </div>
+
+                <h3>Operações de Transformação Essenciais</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Operações</th>
+                                <th>Aplicação Prática</th>
+                                <th>Impacto na Qualidade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Limpeza de Dados</strong></td>
+                                <td>Remove nulls, duplicatas, outliers</td>
+                                <td>Preparação para modelagem estatística</td>
+                                <td>Alto - elimina ruídos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Transformação Estrutural</strong></td>
+                                <td>Pivot, Unpivot, Split Columns</td>
+                                <td>Normalização de estruturas complexas</td>
+                                <td>Crítico - define granularidade</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Enriquecimento</strong></td>
+                                <td>Calculated Columns, Custom Functions</td>
+                                <td>Adição de métricas derivadas</td>
+                                <td>Médio - adiciona valor analítico</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Integração</strong></td>
+                                <td>Merge, Append, Lookup</td>
+                                <td>Combinação de múltiplas fontes</td>
+                                <td>Alto - cria visão unificada</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Otimização de Performance</h3>
+                <div class="content-box success">
+                    <p><strong>Query Folding:</strong> O Power Query automaticamente "empurra" transformações compatíveis para o servidor de dados origem, reduzindo significativamente o tempo de processamento e uso de memória local.</p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <i class="fas fa-code"></i>
+                        Exemplo de M Language - Limpeza Automatizada
+                    </div>
+                    <pre><code>let
+    Source = Excel.Workbook(File.Contents("C:\Data\Vendas.xlsx")),
+    Vendas = Source{[Item="Vendas",Kind="Sheet"]}[Data],
+    #"Promoted Headers" = Table.PromoteHeaders(Vendas),
+    #"Removed Nulls" = Table.SelectRows(#"Promoted Headers", 
+        each ([Produto] <> null and [Valor] <> null)),
+    #"Changed Types" = Table.TransformColumnTypes(#"Removed Nulls", 
+        {{"Data", type date}, {"Valor", Currency.Type}}),
+    #"Added Custom" = Table.AddColumn(#"Changed Types", "Ano-Mês", 
+        each Date.ToText([Data], "yyyy-MM"))
+in
+    #"Added Custom"</code></pre>
+                </div>
+            </section>
+            
+            <section id="chapter4" class="section">
+                <h1>Capítulo 4: Modelo de Dados - Arquitetura Analítica</h1>
+
+                <div class="content-box">
+                    <p>O <strong>Modelo de Dados</strong> representa a arquitetura lógica que define como diferentes entidades de informação se relacionam e interagem dentro do seu dashboard. É fundamentado nos princípios de modelagem dimensional, otimizado para consultas analíticas de alta performance.</p>
+                </div>
+
+                <h3>Fundamentos da Modelagem Dimensional</h3>
+                <p>O Power BI utiliza o conceito de <strong>Star Schema</strong> como padrão arquitetural, organizando dados em estruturas otimizadas para análise:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Tabelas Fato (Fact Tables):</strong> Contêm métricas quantitativas e chaves estrangeiras para dimensões</li>
+                        <li><strong>Tabelas Dimensão (Dimension Tables):</strong> Armazenam atributos descritivos para contextualização e filtros</li>
+                        <li><strong>Relacionamentos (Relationships):</strong> Definem como as tabelas se conectam logicamente</li>
+                        <li><strong>Hierarquias (Hierarchies):</strong> Estabelecem níveis de drill-down para exploração analítica</li>
+                    </ul>
+                </div>
+
+                <h3>Tipos de Relacionamentos e Cardinalidades</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tipo de Relacionamento</th>
+                                <th>Cardinalidade</th>
+                                <th>Caso de Uso</th>
+                                <th>Impacto na Performance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>One-to-Many (1:*)</strong></td>
+                                <td>Um para muitos</td>
+                                <td>Produto → Vendas, Cliente → Pedidos</td>
+                                <td>Otimizado - padrão recomendado</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Many-to-Many (*:*)</strong></td>
+                                <td>Muitos para muitos</td>
+                                <td>Produtos ↔ Categorias complexas</td>
+                                <td>Cuidado - pode impactar performance</td>
+                            </tr>
+                            <tr>
+                                <td><strong>One-to-One (1:1)</strong></td>
+                                <td>Um para um</td>
+                                <td>Tabelas de referência especializadas</td>
+                                <td>Neutro - considere consolidação</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Otimização e Melhores Práticas</h3>
+                <div class="content-box important">
+                    <p><strong>Direção de Filtros:</strong> Configure adequadamente a direção de propagação de filtros (Single/Both) para garantir que interactions funcionem corretamente sem comprometer performance.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Chaves Surrogate:</strong> Utilize chaves numéricas artificiais para otimizar joins e reduzir uso de memória</li>
+                        <li><strong>Tabelas de Data:</strong> Implemente sempre uma tabela de calendário dedicada para análises temporais</li>
+                        <li><strong>Row-Level Security:</strong> Configure segurança em nível de linha quando necessário, sem impactar usabilidade</li>
+                    </ul>
+                </div>
+
+                <div class="architecture-diagram">
+                    <div class="mermaid">
+                        erDiagram
+                            VENDAS {
+                                int VendaID PK
+                                int ProdutoID FK
+                                int ClienteID FK
+                                date DataVenda
+                                decimal ValorVenda
+                                int Quantidade
+                            }
+                            
+                            PRODUTOS {
+                                int ProdutoID PK
+                                string NomeProduto
+                                int CategoriaID FK
+                                decimal PrecoUnitario
+                                string Fornecedor
+                            }
+                            
+                            CLIENTES {
+                                int ClienteID PK
+                                string NomeCliente
+                                string Cidade
+                                string Estado
+                                string Segmento
+                            }
+                            
+                            CATEGORIAS {
+                                int CategoriaID PK
+                                string NomeCategoria
+                                string Descricao
+                            }
+                            
+                            CALENDARIO {
+                                date Data PK
+                                int Ano
+                                int Mes
+                                string NomeMes
+                                int Trimestre
+                                int Semana
+                            }
+                            
+                            VENDAS ||--o{ PRODUTOS : "tem"
+                            VENDAS ||--o{ CLIENTES : "feita_por"
+                            PRODUTOS ||--o{ CATEGORIAS : "pertence_a"
+                            VENDAS ||--o{ CALENDARIO : "ocorre_em"
+                    </div>
+                </div>
+            </section>
+            
+            <section id="chapter5" class="section">
+                <h1>Capítulo 5: DAX - Linguagem de Análise de Dados</h1>
+
+                <div class="content-box highlight">
+                    <p><strong>DAX (Data Analysis Expressions)</strong> é uma linguagem funcional especializada para cálculos analíticos em modelos de dados tabulares. Combina sintaxe similar ao Excel com poder computacional de bancos de dados analíticos, oferecendo capacidades avançadas de agregação, filtros contextuais e inteligência de tempo.</p>
+                </div>
+
+                <h3>Arquitetura e Conceitos Fundamentais</h3>
+                <p>DAX opera em dois contextos principais que determinam como os cálculos são avaliados:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Row Context:</strong> Avalia expressões linha por linha, típico em Calculated Columns</li>
+                        <li><strong>Filter Context:</strong> Define o conjunto de dados considerado para agregações, influenciado por filtros, slicers e relacionamentos</li>
+                        <li><strong>Evaluation Context:</strong> Combinação dos contextos anteriores, determinando o resultado final dos cálculos</li>
+                        <li><strong>Context Transition:</strong> Conversão automática entre contextos durante a avaliação de medidas</li>
+                    </ul>
+                </div>
+
+                <h3>Categorias de Funções DAX</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Funções Principais</th>
+                                <th>Propósito</th>
+                                <th>Exemplo de Uso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Agregação</strong></td>
+                                <td>SUM, AVERAGE, COUNT, MAX, MIN</td>
+                                <td>Cálculos estatísticos básicos</td>
+                                <td>Receita Total, Ticket Médio</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Filtros</strong></td>
+                                <td>FILTER, ALL, CALCULATE, RELATED</td>
+                                <td>Manipulação de contexto</td>
+                                <td>Vendas do Ano Anterior</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Time Intelligence</strong></td>
+                                <td>DATESYTD, SAMEPERIODLASTYEAR</td>
+                                <td>Análises temporais</td>
+                                <td>YTD, Crescimento Anual</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Iteração</strong></td>
+                                <td>SUMX, AVERAGEX, MAXX</td>
+                                <td>Cálculos linha por linha</td>
+                                <td>Margem por Produto</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Medidas Essenciais para Dashboard de Vendas</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <i class="fas fa-calculator"></i>
+                        Medidas Fundamentais de Vendas
+                    </div>
+                    <pre><code>// Receita Total
+Receita Total = SUM(Vendas[ValorVenda])
+
+// Ticket Médio
+Ticket Médio = 
+DIVIDE(
+    [Receita Total],
+    DISTINCTCOUNT(Vendas[VendaID])
+)
+
+// Crescimento vs Ano Anterior
+Crescimento YoY = 
+VAR ReceitaAtual = [Receita Total]
+VAR ReceitaAnoAnterior = 
+CALCULATE(
+    [Receita Total],
+    SAMEPERIODLASTYEAR(Calendario[Data])
+)
+RETURN
+DIVIDE(
+    ReceitaAtual - ReceitaAnoAnterior,
+    ReceitaAnoAnterior
+)
+
+// Ranking de Produtos
+Ranking Produtos = 
+RANKX(
+    ALL(Produtos[NomeProduto]),
+    [Receita Total],
+    ,
+    DESC
+)</code></pre>
+                </div>
+
+                <h3>Otimização de Performance DAX</h3>
+                <div class="content-box success">
+                    <p><strong>Variables (VAR):</strong> Utilize variáveis para armazenar cálculos intermediários, melhorando performance e legibilidade do código. O motor DAX otimiza automaticamente o uso de memória e processamento.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Avoid Row Context:</strong> Prefira SUMX a SUM quando necessário iterar, mas evite iteração desnecessária</li>
+                        <li><strong>Filter Early:</strong> Aplique filtros no início das expressões para reduzir o conjunto de dados processado</li>
+                        <li><strong>Use DIVIDE:</strong> Sempre utilize DIVIDE em vez de operador "/" para evitar erros de divisão por zero</li>
+                        <li><strong>Minimize CALCULATE:</strong> Use apenas quando necessário modificar o filter context</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section id="chapter6" class="section">
+                <h1>Capítulo 6: KPIs - Indicadores Estratégicos de Performance</h1>
+
+                <div class="content-box">
+                    <p>Os <strong>Indicadores-Chave de Performance (KPIs)</strong> representam métricas estratégicas essenciais que fornecem uma visão sintética e acionável do desempenho organizacional. No contexto de dashboards de vendas, funcionam como "sinais vitais" do negócio, oferecendo insights imediatos sobre saúde financeira e operacional.</p>
+                </div>
+
+                <h3>Framework de KPIs para Vendas</h3>
+                <p>Um dashboard de vendas eficiente deve contemplar KPIs que cobram diferentes aspectos do funil comercial:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>KPIs de Volume:</strong> Métricas quantitativas que medem escala e crescimento</li>
+                        <li><strong>KPIs de Valor:</strong> Indicadores monetários que avaliam rentabilidade e eficiência</li>
+                        <li><strong>KPIs de Eficiência:</strong> Razões e percentuais que mostram produtividade</li>
+                        <li><strong>KPIs de Tendência:</strong> Comparações temporais que indicam direção do negócio</li>
+                    </ul>
+                </div>
+
+                <h3>Matriz de KPIs Estratégicos</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>KPI</th>
+                                <th>Fórmula DAX</th>
+                                <th>Significado Estratégico</th>
+                                <th>Meta Típica</th>
+                                <th>Frequência</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Receita Total</strong></td>
+                                <td><code>SUM(Vendas[ValorVenda])</code></td>
+                                <td>Saúde financeira geral do negócio</td>
+                                <td>Crescimento 10-15% a.a.</td>
+                                <td>Diária</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Ticket Médio</strong></td>
+                                <td><code>DIVIDE([Receita Total], [Qtd Vendas])</code></td>
+                                <td>Valor médio por transação</td>
+                                <td>Crescimento 5% a.a.</td>
+                                <td>Semanal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Margem Bruta</strong></td>
+                                <td><code>DIVIDE([Lucro Total], [Receita Total])</code></td>
+                                <td>Eficiência operacional e precificação</td>
+                                <td>25-40% por setor</td>
+                                <td>Mensal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Taxa Crescimento</strong></td>
+                                <td><code>DIVIDE([Receita] - [Receita AA], [Receita AA])</code></td>
+                                <td>Momentum e sustentabilidade</td>
+                                <td>Positiva consistente</td>
+                                <td>Mensal</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Conversão</strong></td>
+                                <td><code>DIVIDE([Vendas Fechadas], [Oportunidades])</code></td>
+                                <td>Eficácia do processo comercial</td>
+                                <td>20-30% por setor</td>
+                                <td>Semanal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Design Visual de KPIs</h3>
+                <div class="content-box highlight">
+                    <p><strong>Hierarchy of Information:</strong> KPIs devem seguir princípios de design que facilitam a leitura rápida: número principal em destaque, contexto temporal, indicadores visuais de tendência e benchmarks de performance.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Card Visuals:</strong> Ideais para valores absolutos com formatação personalizada</li>
+                        <li><strong>Gauge Charts:</strong> Eficazes para mostrar progresso em relação a metas</li>
+                        <li><strong>KPI Visuals:</strong> Combinam valor, meta e tendência em um componente único</li>
+                        <li><strong>Multi-row Cards:</strong> Agrupam KPIs relacionados com contexto compartilhado</li>
+                    </ul>
+                </div>
+
+                <h3>Alertas e Thresholds</h3>
+                <div class="content-box important">
+                    <p><strong>Sistema de Alertas:</strong> Configure thresholds automáticos que destaquem visualmente quando KPIs estão fora dos parâmetros esperados. Use cores consistentes: verde para performance superior, amarelo para atenção, vermelho para ação imediata necessária.</p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <i class="fas fa-chart-line"></i>
+                        KPI com Conditional Formatting
+                    </div>
+                    <pre><code>// Status de Performance
+Status Receita = 
+VAR PerformanceAtual = [Receita Total]
+VAR MetaMensal = 1000000
+VAR PercentualMeta = DIVIDE(PerformanceAtual, MetaMensal)
+RETURN
+SWITCH(
+    TRUE(),
+    PercentualMeta >= 1.1, "🟢 Excelente",
+    PercentualMeta >= 1.0, "🟡 Meta Atingida", 
+    PercentualMeta >= 0.9, "🟠 Atenção",
+    "🔴 Crítico"
+)
+
+// Trend Indicator
+Trend Mensal = 
+VAR ReceitaAtual = [Receita Total]
+VAR ReceitaMesAnterior = 
+CALCULATE(
+    [Receita Total],
+    DATEADD(Calendario[Data], -1, MONTH)
+)
+RETURN
+IF(
+    ReceitaAtual > ReceitaMesAnterior,
+    "↗️ Crescendo",
+    IF(
+        ReceitaAtual < ReceitaMesAnterior,
+        "↘️ Declinando",
+        "➡️ Estável"
+    )
+)</code></pre>
+                </div>
+            </section>
+            
+            <section id="chapter7" class="section">
+                <h1>Capítulo 7: Visualizações Interativas - Storytelling com Dados</h1>
+
+                <div class="content-box">
+                    <p>As <strong>Visualizações Interativas</strong> transformam dados complexos em narrativas visuais compreensíveis, permitindo exploração dinâmica e descoberta de insights através de interações intuitivas. Representam a camada de apresentação que traduz análises técnicas em informações acionáveis para diferentes stakeholders.</p>
+                </div>
+
+                <h3>Princípios de Design para Dashboards</h3>
+                <p>Um dashboard eficaz segue princípios fundamentais de design de informação e user experience:</p>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Progressive Disclosure:</strong> Apresente informações em níveis hierárquicos, do geral para o específico</li>
+                        <li><strong>Consistency:</strong> Mantenha padrões visuais consistentes em cores, tipografia e layout</li>
+                        <li><strong>Context Preservation:</strong> Garanta que filtros e seleções mantenham contexto claro</li>
+                        <li><strong>Performance First:</strong> Otimize para carregamento rápido e interações fluidas</li>
+                    </ul>
+                </div>
+
+                <h3>Taxonomia de Visualizações para Vendas</h3>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Tipos de Visual</th>
+                                <th>Melhor Uso</th>
+                                <th>Limitações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Comparação</strong></td>
+                                <td>Column, Bar, Stacked Bar</td>
+                                <td>Rankings, comparações categóricas</td>
+                                <td>Máximo 10-15 categorias</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Temporal</strong></td>
+                                <td>Line, Area, Waterfall</td>
+                                <td>Tendências, sazonalidade, evolução</td>
+                                <td>Requer data contínua</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Distribuição</strong></td>
+                                <td>Pie, Donut, TreeMap</td>
+                                <td>Proporções, composição de total</td>
+                                <td>Eficaz até 7 segmentos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Correlação</strong></td>
+                                <td>Scatter, Bubble Chart</td>
+                                <td>Relações entre variáveis</td>
+                                <td>Requer variáveis numéricas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Geográfico</strong></td>
+                                <td>Map, Filled Map, ArcGIS</td>
+                                <td>Análise territorial de vendas</td>
+                                <td>Dependente de geocodificação</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hierárquico</strong></td>
+                                <td>Matrix, Drill-down Charts</td>
+                                <td>Exploração multi-dimensional</td>
+                                <td>Pode criar complexidade visual</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Interatividade e Cross-Filtering</h3>
+                <div class="content-box highlight">
+                    <p><strong>Cross-Filtering Engine:</strong> O Power BI utiliza um mecanismo sofisticado de filtros cruzados que propaga seleções entre visuais automaticamente, criando uma experiência de exploração intuitiva onde cada clique revela novas perspectivas dos dados.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Highlight vs Filter:</strong> Configure adequadamente se interactions devem filtrar ou apenas destacar dados</li>
+                        <li><strong>Bidirectional Filters:</strong> Use com parcimônia relacionamentos bidirecionais para evitar ambiguidade</li>
+                        <li><strong>Drill-through Pages:</strong> Implemente páginas de detalhe para análises aprofundadas</li>
+                        <li><strong>Bookmarks:</strong> Crie cenários pré-definidos para facilitar apresentações</li>
+                    </ul>
+                </div>
+
+                <h3>Arquitetura de Interação</h3>
+
+                <div class="architecture-diagram">
+                    <div class="mermaid">
+                        graph TD
+                            A[👤 Usuário Clica em Visual] --> B[⚙️ Power BI Engine]
+                            B --> C{Tipo de Interação}
+                            C -->|Filter| D[🔍 Aplica Filtro Global]
+                            C -->|Highlight| E[✨ Destaque Visual]
+                            C -->|Drill| F[🔭 Navegação Hierárquica]
+                            
+                            D --> G[📊 Recalcula Medidas DAX]
+                            E --> H[🎨 Atualiza Formatação]
+                            F --> I[📄 Carrega Nova Página/Nível]
+                            
+                            G --> J[🔄 Atualiza Todos os Visuais]
+                            H --> J
+                            I --> J
+                            
+                            J --> K[👁️ Exibe Resultado ao Usuário]
+                            
+                            style A fill:#F2C811,stroke:#004B87,stroke-width:3px,color:#004B87
+                            style B fill:#00BCF2,stroke:#004B87,stroke-width:2px,color:#ffffff
+                            style J fill:#107C10,stroke:#004B87,stroke-width:2px,color:#ffffff
+                            style K fill:#6B69D6,stroke:#004B87,stroke-width:2px,color:#ffffff
+                    </div>
+                </div>
+
+                <h3>Otimização de Performance Visual</h3>
+                <div class="content-box success">
+                    <p><strong>Rendering Optimization:</strong> Power BI otimiza automaticamente o rendering de visuais baseado na viewport e dados visíveis. Utilize técnicas como sampling para grandes datasets e considere summarization tables para agregações complexas.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Visual Consolidation:</strong> Evite excesso de visuais por página - máximo recomendado é 6-8 visuais</li>
+                        <li><strong>Data Reduction:</strong> Use top N filters e agregações quando apropriado</li>
+                        <li><strong>Custom Visuals:</strong> Avalie impacto de performance antes de implementar visuais personalizados</li>
+                        <li><strong>Mobile Optimization:</strong> Configure layouts responsivos para diferentes dispositivos</li>
+                    </ul>
+                </div>
+
+                <h3>Casos de Uso Avançados</h3>
+
+                <div class="content-box important">
+                    <p><strong>Dynamic Titles e Conditional Formatting:</strong> Utilize medidas DAX para criar títulos dinâmicos e formatação condicional baseada em contexto, tornando dashboards mais informativos e visuellement impactantes.</p>
+                </div>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <i class="fas fa-paint-brush"></i>
+                        Formatação Condicional Avançada
+                    </div>
+                    <pre><code>// Título Dinâmico para Visual
+Título Dinâmico = 
+VAR PeriodoSelecionado = 
+    IF(
+        HASONEVALUE(Calendario[Ano]),
+        "Vendas " & SELECTEDVALUE(Calendario[Ano]),
+        "Vendas - Múltiplos Períodos"
+    )
+VAR TotalVendas = FORMAT([Receita Total], "#,##0")
+RETURN
+PeriodoSelecionado & " - Total: R$ " & TotalVendas
+
+// Cor Condicional para KPIs
+Cor Performance = 
+VAR PercentualMeta = DIVIDE([Receita Total], [Meta Mensal])
+RETURN
+SWITCH(
+    TRUE(),
+    PercentualMeta >= 1.1, "#107C10",  // Verde
+    PercentualMeta >= 1.0, "#F2C811",  // Amarelo  
+    PercentualMeta >= 0.9, "#FF8C00",  // Laranja
+    "#D13438"                          // Vermelho
+)
+
+// Tooltip Customizado
+Tooltip Detalhado = 
+"Produto: " & SELECTEDVALUE(Produtos[NomeProduto]) & 
+UNICHAR(10) & "Receita: " & FORMAT([Receita Total], "R$ #,##0") &
+UNICHAR(10) & "Unidades: " & FORMAT([Qtd Vendas], "#,##0") &
+UNICHAR(10) & "Margem: " & FORMAT([Margem %], "0.0%")</code></pre>
+                </div>
+
+                <h3>Testing e Validação</h3>
+                <div class="content-box">
+                    <p><strong>User Acceptance Testing:</strong> Sempre valide dashboards com usuários finais reais, testando cenários de uso típicos e casos extremos. Documente feedback e implemente melhorias iterativamente.</p>
+                </div>
+
+                <div class="professional-list">
+                    <ul>
+                        <li><strong>Cross-browser Testing:</strong> Valide compatibilidade em diferentes navegadores e dispositivos</li>
+                        <li><strong>Data Accuracy:</strong> Compare resultados com fontes autoritativas para garantir precisão</li>
+                        <li><strong>Performance Benchmarking:</strong> Meça tempos de carregamento em diferentes cenários</li>
+                        <li><strong>Accessibility Compliance:</strong> Garanta conformidade com padrões de acessibilidade</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Dashboard de Vendas - Documentação Técnica. Todos os direitos reservados. | <a href="https://github.com/WebCash-inc" target="_blank">Visite nosso GitHub</a> | <a href="https://powerbi.microsoft.com" target="_blank">Microsoft Power BI</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+    <script>
+        // Initialize Mermaid
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: document.body.classList.contains('dark') ? 'dark' : 'default',
+            securityLevel: 'loose'
+        });
+
+        // Theme Management
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            const themeText = document.getElementById('theme-text');
+            
+            body.classList.toggle('dark');
+            const isDark = body.classList.contains('dark');
+            
+            // Update button
+            themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            themeText.textContent = isDark ? 'Light' : 'Dark';
+            
+            // Save preference
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            // Update Mermaid theme
+            setTimeout(() => updateMermaidTheme(), 100);
+        }
+
+        function updateMermaidTheme() {
+            const isDark = document.body.classList.contains('dark');
+            mermaid.initialize({ 
+                startOnLoad: true,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose'
+            });
+            
+            // Re-render diagrams
+            document.querySelectorAll('.mermaid').forEach((element, index) => {
+                if (element.getAttribute('data-processed') === 'true') {
+                    const graphDefinition = element.getAttribute('data-original') || element.textContent;
+                    element.innerHTML = graphDefinition;
+                    element.removeAttribute('data-processed');
+                }
+            });
+            
+            mermaid.init();
+        }
+
+        // Mobile Menu Management
+        function toggleMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
+            const body = document.body;
+            
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+            body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+        }
+
+        function closeMobileMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.querySelector('.mobile-overlay');
+            const body = document.body;
+            
+            sidebar.classList.remove('open');
+            overlay.classList.remove('active');
+            body.style.overflow = '';
+        }
+
+        // Navigation Management
+        function updateActiveNavigation() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let current = 'intro';
+            
+            const offset = window.innerHeight / 3;
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= offset && rect.bottom >= offset) {
+                    current = section.id;
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                
+                if (targetSection) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const offsetTop = targetSection.offsetTop - headerHeight - 20;
+                    
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Load saved theme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark');
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Light';
+            }
+            
+            // Store original mermaid content
+            document.querySelectorAll('.mermaid').forEach(element => {
+                element.setAttribute('data-original', element.textContent);
+            });
+            
+            updateActiveNavigation();
+            updateMermaidTheme();
+        });
+
+        // Scroll event with throttling
+        let scrollTimeout;
+        window.addEventListener('scroll', () => {
+            if (scrollTimeout) {
+                clearTimeout(scrollTimeout);
+            }
+            scrollTimeout = setTimeout(updateActiveNavigation, 10);
+        });
+
+        // Handle resize
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMobileMenu();
+            }
+        });
+
+        // Close mobile menu on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenu();
+            }
+        });
+    </script>
+</body>
+</html>
