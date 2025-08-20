@@ -2,139 +2,139 @@
 
 ## Supported Versions
 
-Esta seção informa sobre quais versões do Dashboard de Vendas Power BI estão atualmente recebendo atualizações de segurança.
+This section tells people about which versions of the Sales Dashboard Power BI project are currently being supported with security updates.
 
-| Versão | Suportada          | Status |
-| ------ | ------------------ | ------ |
-| 1.2.x  | :white_check_mark: | Versão atual com suporte ativo |
-| 1.1.x  | :white_check_mark: | Suporte de segurança limitado |
-| 1.0.x  | :x:                | Sem suporte - Migre para v1.2+ |
-| < 1.0  | :x:                | Versões depreciadas |
+| Version | Supported          | Status |
+| ------- | ------------------ | ------ |
+| 1.2.x   | :white_check_mark: | Current version with active support |
+| 1.1.x   | :white_check_mark: | Limited security support |
+| 1.0.x   | :x:                | No support - Please upgrade to v1.2+ |
+| < 1.0   | :x:                | Deprecated versions |
 
-### Notas sobre Versões
-- **v1.2.x**: Versão recomendada com todas as correções de segurança
-- **v1.1.x**: Recebe apenas correções críticas de segurança
-- **v1.0.x e anteriores**: Não recebem mais atualizações
+### Version Notes
+- **v1.2.x**: Recommended version with all security fixes
+- **v1.1.x**: Receives only critical security patches
+- **v1.0.x and earlier**: No longer receiving updates
 
 ## Reporting a Vulnerability
 
-### Como Reportar uma Vulnerabilidade
+### How to Report a Vulnerability
 
-Se você descobriu uma vulnerabilidade de segurança no Dashboard de Vendas Power BI, pedimos que nos ajude a mantê-lo seguro seguindo as diretrizes abaixo:
+If you've discovered a security vulnerability in the Sales Dashboard Power BI project, please help us keep it secure by following the guidelines below:
 
-#### 📧 Canais de Comunicação
-- **Email prioritário**: security@webcash-inc.com
-- **GitHub Issues**: Para vulnerabilidades não-críticas (use label `security`)
-- **Contato direto**: Via GitHub [@WebCash-inc](https://github.com/WebCash-inc)
+#### 📧 Communication Channels
+- **Priority email**: suportwebcash@gmail.com
+- **GitHub Issues**: For non-critical vulnerabilities (use `security` label)
+- **Direct contact**: Via GitHub [@WebCash-inc](https://github.com/WebCash-inc)
 
-#### ⏱️ Processo e Cronograma
-1. **Confirmação inicial**: Resposta em até **48 horas**
-2. **Avaliação**: Análise completa em até **5 dias úteis**
-3. **Correção**: Implementação em até **14 dias** para vulnerabilidades críticas
-4. **Divulgação**: Comunicado público após correção (se aplicável)
+#### ⏱️ Process and Timeline
+1. **Initial confirmation**: Response within **48 hours**
+2. **Assessment**: Complete analysis within **5 business days**
+3. **Fix implementation**: Within **14 days** for critical vulnerabilities
+4. **Public disclosure**: After fix implementation (if applicable)
 
-#### 🔍 Informações Necessárias
-Ao reportar, inclua:
-- **Descrição detalhada** da vulnerabilidade
-- **Passos para reprodução** do problema
-- **Versão afetada** do dashboard
-- **Impacto potencial** da vulnerabilidade
-- **Evidências** (screenshots, logs, etc.)
-- **Sua informação de contato** para acompanhamento
+#### 🔍 Required Information
+When reporting, please include:
+- **Detailed description** of the vulnerability
+- **Steps to reproduce** the issue
+- **Affected version** of the dashboard
+- **Potential impact** of the vulnerability
+- **Evidence** (screenshots, logs, etc.)
+- **Your contact information** for follow-up
 
-#### 🚨 Classificação de Severidade
+#### 🚨 Severity Classification
 
-| Nível | Descrição | Tempo de Resposta |
-|-------|-----------|-------------------|
-| **Crítica** | Acesso não autorizado a dados sensíveis | 24h |
-| **Alta** | Comprometimento da integridade dos dados | 48h |
-| **Média** | Vulnerabilidades que afetam funcionalidades | 5 dias |
-| **Baixa** | Problemas menores de segurança | 10 dias |
+| Level | Description | Response Time |
+|-------|-------------|---------------|
+| **Critical** | Unauthorized access to sensitive data | 24h |
+| **High** | Data integrity compromise | 48h |
+| **Medium** | Vulnerabilities affecting functionality | 5 days |
+| **Low** | Minor security issues | 10 days |
 
-### 🛡️ Tipos de Vulnerabilidades Relevantes
+### 🛡️ Relevant Vulnerability Types
 
-Para este projeto Power BI, consideramos especialmente:
+For this Power BI project, we particularly consider:
 
-#### Dados e Privacidade
-- Exposição não autorizada de dados de vendas
-- Vazamento de informações comerciais sensíveis
-- Problemas na anonimização de dados
+#### Data and Privacy
+- Unauthorized exposure of sales data
+- Leakage of sensitive business information
+- Issues with data anonymization
 
-#### Acesso e Autenticação
-- Bypass de controles de acesso
-- Elevação de privilégios no Power BI
-- Problemas com Row Level Security (RLS)
+#### Access and Authentication
+- Access control bypass
+- Privilege escalation in Power BI
+- Row Level Security (RLS) problems
 
-#### Integridade dos Dados
-- Manipulação não autorizada de dados
-- Corrupção de métricas e KPIs
-- Alteração maliciosa de DAX
+#### Data Integrity
+- Unauthorized data manipulation
+- Corruption of metrics and KPIs
+- Malicious DAX alterations
 
-#### Configuração e Deploy
-- Configurações inseguras padrão
-- Exposição de credenciais
-- Problemas na conexão com fontes de dados
+#### Configuration and Deployment
+- Insecure default configurations
+- Credential exposure
+- Data source connection issues
 
-### ✅ O que Esperamos de Você
+### ✅ What We Expect from You
 
-- **Responsabilidade**: Não divulgue a vulnerabilidade publicamente até a correção
-- **Cooperação**: Trabalhe conosco para validar e corrigir o problema
-- **Detalhes**: Forneça informações suficientes para reproduzir o problema
-- **Paciência**: Aguarde nossa resposta dentro dos prazos estabelecidos
+- **Responsibility**: Don't disclose the vulnerability publicly until fixed
+- **Cooperation**: Work with us to validate and fix the issue
+- **Details**: Provide sufficient information to reproduce the problem
+- **Patience**: Wait for our response within established timeframes
 
-### ✅ O que Você Pode Esperar de Nós
+### ✅ What You Can Expect from Us
 
-- **Resposta rápida**: Confirmação do recebimento em até 48h
-- **Transparência**: Atualizações regulares sobre o progresso
-- **Reconhecimento**: Crédito público pela descoberta (se desejado)
-- **Correção**: Implementação de fix em tempo hábil
-- **Comunicação**: Notificação sobre o status da correção
+- **Quick response**: Receipt confirmation within 48h
+- **Transparency**: Regular updates on progress
+- **Recognition**: Public credit for discovery (if desired)
+- **Fix**: Timely implementation of solution
+- **Communication**: Status notifications about the fix
 
-### 🏆 Programa de Reconhecimento
+### 🏆 Recognition Program
 
-Valorizamos contribuições para a segurança do projeto:
-- **Hall of Fame**: Reconhecimento no README.md
-- **Badges especiais**: Para contribuidores recorrentes
-- **Prioridade em PRs**: Para colaboradores de segurança
+We value contributions to project security:
+- **Hall of Fame**: Recognition in README.md
+- **Special badges**: For recurring contributors
+- **PR priority**: For security collaborators
 
-### ❌ Vulnerabilidades NÃO Aceitas
+### ❌ Non-Accepted Vulnerabilities
 
-- Problemas relacionados exclusivamente ao Power BI Service
-- Vulnerabilidades que requerem acesso administrativo
-- Ataques de engenharia social
-- Problemas de performance que não impactem segurança
-- Vulnerabilidades em bibliotecas third-party sem impacto direto
+- Issues exclusively related to Power BI Service
+- Vulnerabilities requiring administrative access
+- Social engineering attacks
+- Performance issues that don't impact security
+- Third-party library vulnerabilities without direct impact
 
-### 📚 Recursos de Segurança
+### 📚 Security Resources
 
-#### Documentação Relevante
+#### Relevant Documentation
 - [Power BI Security Whitepaper](https://docs.microsoft.com/power-bi/guidance/whitepaper-powerbi-security)
 - [Data Protection in Power BI](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview)
 - [Row Level Security Guide](https://docs.microsoft.com/power-bi/admin/service-admin-rls)
 
-#### Best Practices Implementadas
-- ✅ Row Level Security (RLS) configurado
-- ✅ Sensitive data masking aplicado
-- ✅ Audit logs habilitados
-- ✅ Backup regular dos dados
-- ✅ Controle de versão das alterações
+#### Implemented Best Practices
+- ✅ Row Level Security (RLS) configured
+- ✅ Sensitive data masking applied
+- ✅ Audit logs enabled
+- ✅ Regular data backup
+- ✅ Version control for changes
 
-### 📞 Contatos de Emergência
+### 📞 Emergency Contacts
 
-Para vulnerabilidades críticas que requerem atenção imediata:
+For critical vulnerabilities requiring immediate attention:
 
-- **Equipe de Segurança**: security@webcash-inc.com
-- **Desenvolvedor Principal**: Via GitHub Issues marcando @WebCash-inc
-- **Escalação**: Para casos urgentes, mencione "SECURITY CRITICAL" no assunto
-
----
-
-## 🔒 Compromisso com a Segurança
-
-A segurança dos dados empresariais é nossa prioridade máxima. Este dashboard foi desenvolvido seguindo as melhores práticas de segurança do Power BI e continuamos trabalhando para manter os mais altos padrões de proteção.
-
-**Última atualização**: Agosto 2025  
+- **Security Team**: suportwebcash@gmail.com
+- **Lead Developer**: Via GitHub Issues tagging @WebCash-inc
+- **Escalation**: For urgent cases, mention "SECURITY CRITICAL" in subject
 
 ---
 
-*Para dúvidas sobre esta política de segurança, entre em contato através do email webcash@gmail.com*
+## 🔒 Security Commitment
+
+The security of business data is our top priority. This dashboard was developed following Power BI security best practices and we continue working to maintain the highest protection standards.
+
+**Last updated**: August 2025  
+
+---
+
+*For questions about this security policy, contact us at security@webcash-inc.com*
