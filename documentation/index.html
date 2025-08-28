@@ -5,106 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documentação Dashboard de Vendas</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='%23004B87'><rect x='4' y='18' width='6' height='10' rx='1'></rect><rect x='13' y='10' width='6' height='18' rx='1'></rect><rect x='22' y='4' width='6' height='24' rx='1'></rect></svg>">
+    <link rel="icon" type="image/png" href="img/dashboard.png" />
     
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Barra de Progresso no Topo -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
     <header class="header">
         <div class="header-content">
             <a href="#overview" class="logo">
                 <div class="logo-icon">
-                    <img src="img/logo_webcash.png" alt="Logo Creator QRCode" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <svg viewBox="0 0 32 32" style="display: none;">
-                        <rect width="32" height="32" rx="6" fill="#3498db"/>
-                        <rect x="4" y="4" width="24" height="24" rx="2" fill="white"/>
-                        <rect x="6" y="6" width="4" height="4" fill="#3498db"/>
-                        <rect x="22" y="6" width="4" height="4" fill="#3498db"/>
-                        <rect x="6" y="22" width="4" height="4" fill="#3498db"/>
-                        <rect x="12" y="8" width="8" height="2" fill="#3498db"/>
-                        <rect x="8" y="12" width="2" height="8" fill="#3498db"/>
-                        <rect x="14" y="14" width="4" height="4" fill="#3498db"/>
-                        <rect x="20" y="12" width="2" height="8" fill="#3498db"/>
-                        <rect x="12" y="22" width="8" height="2" fill="#3498db"/>
-                    </svg>
+                    <img src="img/logo_webcash.png" alt="Logo WebCash">
                 </div>
                 <span class="logo-text">Dashboard de Vendas</span>
             </a>
             
             <div class="header-actions">
-                <button class="theme-toggle" onclick="toggleTheme()">
+                <button class="theme-toggle" id="theme-toggle">
                     <i id="theme-icon" class="fas fa-moon"></i>
                     <span id="theme-text">Dark</span>
                 </button>
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
     </header>
 
-    <div class="mobile-overlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
 
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-content">
             <h2 class="sidebar-title">Documentação</h2>
             <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#intro" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-book-open"></i>
-                        Introdução
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#chapter1" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-desktop"></i>
-                        Capítulo 1: Power BI Desktop
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#chapter2" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-search"></i>
-                        Capítulo 2: Fontes de Dados
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#chapter3" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-wrench"></i>
-                        Capítulo 3: Transformação de Dados
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#chapter4" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-project-diagram"></i>
-                        Capítulo 4: Modelo de Dados
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#chapter5" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-calculator"></i>
-                        Capítulo 5: DAX
-                    </a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#chapter6" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-tachometer-alt"></i>
-                        Capítulo 6: KPIs
-                    </a>
-                </li>
-                 <li class="nav-item">
-                    <a href="#chapter7" class="nav-link" onclick="closeMobileMenu()">
-                        <i class="fas fa-chart-bar"></i>
-                        Capítulo 7: Visualizações Interativas
-                    </a>
-                </li>
+                <li class="nav-item"><a href="#dashboard" class="nav-link"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                <li class="nav-item"><a href="#intro" class="nav-link"><i class="fas fa-book-open"></i> Introdução</a></li>
+                <li class="nav-item"><a href="#chapter1" class="nav-link"><i class="fas fa-desktop"></i> Capítulo 1: Power BI</a></li>
+                <li class="nav-item"><a href="#chapter2" class="nav-link"><i class="fas fa-search"></i> Capítulo 2: Fontes</a></li>
+                <li class="nav-item"><a href="#chapter3" class="nav-link"><i class="fas fa-wrench"></i> Capítulo 3: Transformação</a></li>
+                <li class="nav-item"><a href="#chapter4" class="nav-link"><i class="fas fa-project-diagram"></i> Capítulo 4: Modelo</a></li>
+                <li class="nav-item"><a href="#chapter5" class="nav-link"><i class="fas fa-calculator"></i> Capítulo 5: DAX</a></li>
+                <li class="nav-item"><a href="#chapter6" class="nav-link"><i class="fas fa-tachometer-alt"></i> Capítulo 6: KPIs</a></li>
+                <li class="nav-item"><a href="#chapter7" class="nav-link"><i class="fas fa-chart-bar"></i> Capítulo 7: Visualizações</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="main" id="main">
         <div class="content">
+            <!-- Seção do Dashboard Power BI -->
+            <section id="dashboard" class="section">
+                <h1>Visualização Interativa de Vendas</h1>
+                <p>Explore os dados de vendas em tempo real através do nosso dashboard interativo desenvolvido em Power BI. Analise tendências, filtre por regiões, produtos e períodos para obter insights valiosos sobre a performance do negócio.</p>
+                <div class="dashboard-container">
+                    <iframe title="dash_vendas" src="https://app.powerbi.com/view?r=eyJrIjoiMjE3MzZjYWItZDY5My00ZmNiLTlmODYtY2JiZmM0NTIyNjQwIiwidCI6IjgwYTM2ZDViLWI3YmItNDNkMS05ODgxLTI2YTcxMmE5MTU2ZCJ9" frameborder="0" allowFullScreen="true"></iframe>
+                </div>
+            </section>
+
             <section id="intro" class="section">
                 <div class="hero">
                     <div class="hero-content">
@@ -113,23 +79,17 @@
                         
                         <div class="features-grid">
                             <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
+                                <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
                                 <h4>Analytics Avançada</h4>
                                 <p>Transforme dados complexos em insights acionáveis com ferramentas de análise profissional</p>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i class="fas fa-database"></i>
-                                </div>
+                                <div class="feature-icon"><i class="fas fa-database"></i></div>
                                 <h4>Integração de Dados</h4>
                                 <p>Conecte múltiplas fontes de dados e crie modelos relacionais robustos</p>
                             </div>
                             <div class="feature-card">
-                                <div class="feature-icon">
-                                    <i class="fas fa-tachometer-alt"></i>
-                                </div>
+                                <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 <h4>KPIs Estratégicos</h4>
                                 <p>Monitore indicadores críticos de performance em tempo real</p>
                             </div>
@@ -140,14 +100,11 @@
             
             <section id="chapter1" class="section">
                 <h1>Capítulo 1: Power BI Desktop - Sua Plataforma de Desenvolvimento</h1>
-                
                 <div class="content-box highlight">
                     <p><strong>Power BI Desktop</strong> é a ferramenta central para desenvolvimento de soluções de Business Intelligence da Microsoft. Funciona como um ambiente integrado de desenvolvimento (IDE) onde você constrói, testa e otimiza seus dashboards antes da publicação.</p>
                 </div>
-
                 <h3>Arquitetura e Funcionalidades Principais</h3>
                 <p>O Power BI Desktop integra três componentes fundamentais em uma única plataforma, cada um especializado em uma fase específica do desenvolvimento de dashboards:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Vista de Relatório (Report View):</strong> Interface principal para criação e design de visualizações interativas, layouts responsivos e formatação de dashboards</li>
@@ -155,15 +112,12 @@
                         <li><strong>Vista de Modelo (Model View):</strong> Designer visual para definição de relacionamentos entre tabelas, configuração de cardinalidades e otimização de performance do modelo de dados</li>
                     </ul>
                 </div>
-
                 <h3>Benefícios Empresariais</h3>
                 <div class="content-box success">
                     <p>Elimina a dependência de relatórios estáticos e planilhas limitadas, permitindo análises dinâmicas e exploração interativa de dados em tempo real. Reduz significativamente o tempo entre coleta de dados e tomada de decisão estratégica.</p>
                 </div>
-
                 <h3>Integração no Ecossistema Microsoft</h3>
                 <p>Power BI Desktop funciona como ponto de entrada para o ecossistema completo de Business Intelligence da Microsoft, integrando-se nativamente com:</p>
-                
                 <div class="professional-list">
                     <ul>
                         <li><strong>Power BI Service:</strong> Plataforma cloud para publicação e colaboração</li>
@@ -176,14 +130,11 @@
             
             <section id="chapter2" class="section">
                 <h1>Capítulo 2: Fontes de Dados - Fundação do Seu Dashboard</h1>
-
                 <div class="content-box">
                     <p>As <strong>Fontes de Dados</strong> constituem a camada fundamental de qualquer solução de Business Intelligence. No Power BI, esta etapa envolve não apenas a conexão com repositórios de dados, mas também a configuração de atualizações automáticas e otimização de performance de consultas.</p>
                 </div>
-
                 <h3>Estratégia de Conectividade</h3>
                 <p>O Power BI oferece dois modos principais de conexão, cada um com implicações específicas para performance e funcionalidade:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Import Mode:</strong> Carrega dados na memória para máxima performance analítica, ideal para datasets até 1GB</li>
@@ -191,9 +142,7 @@
                         <li><strong>Composite Models:</strong> Combina ambas as abordagens para otimização híbrida de performance</li>
                     </ul>
                 </div>
-
                 <h3>Categorias de Fontes de Dados Suportadas</h3>
-                
                 <div class="table-container">
                     <table>
                         <thead>
@@ -232,12 +181,10 @@
                         </tbody>
                     </table>
                 </div>
-
                 <h3>Melhores Práticas para Configuração</h3>
                 <div class="content-box important">
                     <p><strong>Segurança e Governança:</strong> Sempre configure credenciais adequadas e implemente row-level security quando necessário. Documente todas as fontes de dados para facilitar manutenção e auditoria.</p>
                 </div>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Otimização de Consultas:</strong> Utilize views e stored procedures para preprocessar dados no servidor de origem</li>
@@ -249,14 +196,11 @@
             
             <section id="chapter3" class="section">
                 <h1>Capítulo 3: Transformação de Dados com Power Query</h1>
-
                 <div class="content-box highlight">
                     <p>O <strong>Power Query</strong> é o motor de ETL (Extract, Transform, Load) integrado do Power BI, baseado no mecanismo M language. Oferece capacidades avançadas de limpeza, transformação e enriquecimento de dados através de uma interface visual intuitiva.</p>
                 </div>
-
                 <h3>Arquitetura do Power Query Editor</h3>
                 <p>O ambiente de transformação é estruturado em componentes especializados que trabalham em conjunto para processar dados de forma eficiente:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Query Pane:</strong> Lista hierárquica de todas as consultas, parâmetros e funções do projeto</li>
@@ -265,9 +209,7 @@
                         <li><strong>Formula Bar:</strong> Editor avançado para customização de código M language</li>
                     </ul>
                 </div>
-
                 <h3>Operações de Transformação Essenciais</h3>
-
                 <div class="table-container">
                     <table>
                         <thead>
@@ -306,16 +248,14 @@
                         </tbody>
                     </table>
                 </div>
-
                 <h3>Otimização de Performance</h3>
                 <div class="content-box success">
                     <p><strong>Query Folding:</strong> O Power Query automaticamente "empurra" transformações compatíveis para o servidor de dados origem, reduzindo significativamente o tempo de processamento e uso de memória local.</p>
                 </div>
-
                 <div class="code-block">
                     <div class="code-header">
-                        <i class="fas fa-code"></i>
-                        Exemplo de M Language - Limpeza Automatizada
+                        <span><i class="fas fa-code"></i> Exemplo de M Language - Limpeza Automatizada</span>
+                        <button class="copy-btn" title="Copiar código"><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                     <pre><code>let
     Source = Excel.Workbook(File.Contents("C:\Data\Vendas.xlsx")),
@@ -334,14 +274,11 @@ in
             
             <section id="chapter4" class="section">
                 <h1>Capítulo 4: Modelo de Dados - Arquitetura Analítica</h1>
-
                 <div class="content-box">
                     <p>O <strong>Modelo de Dados</strong> representa a arquitetura lógica que define como diferentes entidades de informação se relacionam e interagem dentro do seu dashboard. É fundamentado nos princípios de modelagem dimensional, otimizado para consultas analíticas de alta performance.</p>
                 </div>
-
                 <h3>Fundamentos da Modelagem Dimensional</h3>
                 <p>O Power BI utiliza o conceito de <strong>Star Schema</strong> como padrão arquitetural, organizando dados em estruturas otimizadas para análise:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Tabelas Fato (Fact Tables):</strong> Contêm métricas quantitativas e chaves estrangeiras para dimensões</li>
@@ -350,9 +287,7 @@ in
                         <li><strong>Hierarquias (Hierarchies):</strong> Estabelecem níveis de drill-down para exploração analítica</li>
                     </ul>
                 </div>
-
                 <h3>Tipos de Relacionamentos e Cardinalidades</h3>
-
                 <div class="table-container">
                     <table>
                         <thead>
@@ -385,12 +320,10 @@ in
                         </tbody>
                     </table>
                 </div>
-
                 <h3>Otimização e Melhores Práticas</h3>
                 <div class="content-box important">
                     <p><strong>Direção de Filtros:</strong> Configure adequadamente a direção de propagação de filtros (Single/Both) para garantir que interactions funcionem corretamente sem comprometer performance.</p>
                 </div>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Chaves Surrogate:</strong> Utilize chaves numéricas artificiais para otimizar joins e reduzir uso de memória</li>
@@ -398,68 +331,59 @@ in
                         <li><strong>Row-Level Security:</strong> Configure segurança em nível de linha quando necessário, sem impactar usabilidade</li>
                     </ul>
                 </div>
-
                 <div class="architecture-diagram">
                     <div class="mermaid">
-                        erDiagram
-                            VENDAS {
-                                int VendaID PK
-                                int ProdutoID FK
-                                int ClienteID FK
-                                date DataVenda
-                                decimal ValorVenda
-                                int Quantidade
-                            }
-                            
-                            PRODUTOS {
-                                int ProdutoID PK
-                                string NomeProduto
-                                int CategoriaID FK
-                                decimal PrecoUnitario
-                                string Fornecedor
-                            }
-                            
-                            CLIENTES {
-                                int ClienteID PK
-                                string NomeCliente
-                                string Cidade
-                                string Estado
-                                string Segmento
-                            }
-                            
-                            CATEGORIAS {
-                                int CategoriaID PK
-                                string NomeCategoria
-                                string Descricao
-                            }
-                            
-                            CALENDARIO {
-                                date Data PK
-                                int Ano
-                                int Mes
-                                string NomeMes
-                                int Trimestre
-                                int Semana
-                            }
-                            
-                            VENDAS ||--o{ PRODUTOS : "tem"
-                            VENDAS ||--o{ CLIENTES : "feita_por"
-                            PRODUTOS ||--o{ CATEGORIAS : "pertence_a"
-                            VENDAS ||--o{ CALENDARIO : "ocorre_em"
+erDiagram
+    VENDAS {
+        int VendaID PK
+        int ProdutoID FK
+        int ClienteID FK
+        date DataVenda
+        decimal ValorVenda
+        int Quantidade
+    }
+    PRODUTOS {
+        int ProdutoID PK
+        string NomeProduto
+        int CategoriaID FK
+        decimal PrecoUnitario
+        string Fornecedor
+    }
+    CLIENTES {
+        int ClienteID PK
+        string NomeCliente
+        string Cidade
+        string Estado
+        string Segmento
+    }
+    CATEGORIAS {
+        int CategoriaID PK
+        string NomeCategoria
+        string Descricao
+    }
+    CALENDARIO {
+        date Data PK
+        int Ano
+        int Mes
+        string NomeMes
+        int Trimestre
+        int Semana
+    }
+    VENDAS ||--o{ PRODUTOS : "tem"
+    VENDAS ||--o{ CLIENTES : "feita_por"
+    PRODUTOS ||--o{ CATEGORIAS : "pertence_a"
+    VENDAS ||--o{ CALENDARIO : "ocorre_em"
                     </div>
                 </div>
             </section>
             
             <section id="chapter5" class="section">
                 <h1>Capítulo 5: DAX - Linguagem de Análise de Dados</h1>
-
                 <div class="content-box highlight">
                     <p><strong>DAX (Data Analysis Expressions)</strong> é uma linguagem funcional especializada para cálculos analíticos em modelos de dados tabulares. Combina sintaxe similar ao Excel com poder computacional de bancos de dados analíticos, oferecendo capacidades avançadas de agregação, filtros contextuais e inteligência de tempo.</p>
                 </div>
-
                 <h3>Arquitetura e Conceitos Fundamentais</h3>
                 <p>DAX opera em dois contextos principais que determinam como os cálculos são avaliados:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Row Context:</strong> Avalia expressões linha por linha, típico em Calculated Columns</li>
@@ -468,9 +392,7 @@ in
                         <li><strong>Context Transition:</strong> Conversão automática entre contextos durante a avaliação de medidas</li>
                     </ul>
                 </div>
-
                 <h3>Categorias de Funções DAX</h3>
-
                 <div class="table-container">
                     <table>
                         <thead>
@@ -509,73 +431,37 @@ in
                         </tbody>
                     </table>
                 </div>
-
                 <h3>Medidas Essenciais para Dashboard de Vendas</h3>
-
                 <div class="code-block">
                     <div class="code-header">
-                        <i class="fas fa-calculator"></i>
-                        Medidas Fundamentais de Vendas
+                        <span><i class="fas fa-calculator"></i> Medidas Fundamentais de Vendas</span>
+                        <button class="copy-btn" title="Copiar código"><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                     <pre><code>// Receita Total
 Receita Total = SUM(Vendas[ValorVenda])
 
 // Ticket Médio
-Ticket Médio = 
-DIVIDE(
-    [Receita Total],
-    DISTINCTCOUNT(Vendas[VendaID])
-)
+Ticket Médio = DIVIDE([Receita Total], DISTINCTCOUNT(Vendas[VendaID]))
 
 // Crescimento vs Ano Anterior
 Crescimento YoY = 
 VAR ReceitaAtual = [Receita Total]
-VAR ReceitaAnoAnterior = 
-CALCULATE(
-    [Receita Total],
-    SAMEPERIODLASTYEAR(Calendario[Data])
-)
+VAR ReceitaAnoAnterior = CALCULATE([Receita Total], SAMEPERIODLASTYEAR(Calendario[Data]))
 RETURN
-DIVIDE(
-    ReceitaAtual - ReceitaAnoAnterior,
-    ReceitaAnoAnterior
-)
+DIVIDE(ReceitaAtual - ReceitaAnoAnterior, ReceitaAnoAnterior)
 
 // Ranking de Produtos
-Ranking Produtos = 
-RANKX(
-    ALL(Produtos[NomeProduto]),
-    [Receita Total],
-    ,
-    DESC
-)</code></pre>
-                </div>
-
-                <h3>Otimização de Performance DAX</h3>
-                <div class="content-box success">
-                    <p><strong>Variables (VAR):</strong> Utilize variáveis para armazenar cálculos intermediários, melhorando performance e legibilidade do código. O motor DAX otimiza automaticamente o uso de memória e processamento.</p>
-                </div>
-
-                <div class="professional-list">
-                    <ul>
-                        <li><strong>Avoid Row Context:</strong> Prefira SUMX a SUM quando necessário iterar, mas evite iteração desnecessária</li>
-                        <li><strong>Filter Early:</strong> Aplique filtros no início das expressões para reduzir o conjunto de dados processado</li>
-                        <li><strong>Use DIVIDE:</strong> Sempre utilize DIVIDE em vez de operador "/" para evitar erros de divisão por zero</li>
-                        <li><strong>Minimize CALCULATE:</strong> Use apenas quando necessário modificar o filter context</li>
-                    </ul>
+Ranking Produtos = RANKX(ALL(Produtos[NomeProduto]), [Receita Total], , DESC)</code></pre>
                 </div>
             </section>
             
             <section id="chapter6" class="section">
                 <h1>Capítulo 6: KPIs - Indicadores Estratégicos de Performance</h1>
-
                 <div class="content-box">
                     <p>Os <strong>Indicadores-Chave de Performance (KPIs)</strong> representam métricas estratégicas essenciais que fornecem uma visão sintética e acionável do desempenho organizacional. No contexto de dashboards de vendas, funcionam como "sinais vitais" do negócio, oferecendo insights imediatos sobre saúde financeira e operacional.</p>
                 </div>
-
                 <h3>Framework de KPIs para Vendas</h3>
                 <p>Um dashboard de vendas eficiente deve contemplar KPIs que cobram diferentes aspectos do funil comercial:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>KPIs de Volume:</strong> Métricas quantitativas que medem escala e crescimento</li>
@@ -584,9 +470,7 @@ RANKX(
                         <li><strong>KPIs de Tendência:</strong> Comparações temporais que indicam direção do negócio</li>
                     </ul>
                 </div>
-
                 <h3>Matriz de KPIs Estratégicos</h3>
-
                 <div class="table-container">
                     <table>
                         <thead>
@@ -637,76 +521,14 @@ RANKX(
                         </tbody>
                     </table>
                 </div>
-
-                <h3>Design Visual de KPIs</h3>
-                <div class="content-box highlight">
-                    <p><strong>Hierarchy of Information:</strong> KPIs devem seguir princípios de design que facilitam a leitura rápida: número principal em destaque, contexto temporal, indicadores visuais de tendência e benchmarks de performance.</p>
-                </div>
-
-                <div class="professional-list">
-                    <ul>
-                        <li><strong>Card Visuals:</strong> Ideais para valores absolutos com formatação personalizada</li>
-                        <li><strong>Gauge Charts:</strong> Eficazes para mostrar progresso em relação a metas</li>
-                        <li><strong>KPI Visuals:</strong> Combinam valor, meta e tendência em um componente único</li>
-                        <li><strong>Multi-row Cards:</strong> Agrupam KPIs relacionados com contexto compartilhado</li>
-                    </ul>
-                </div>
-
-                <h3>Alertas e Thresholds</h3>
-                <div class="content-box important">
-                    <p><strong>Sistema de Alertas:</strong> Configure thresholds automáticos que destaquem visualmente quando KPIs estão fora dos parâmetros esperados. Use cores consistentes: verde para performance superior, amarelo para atenção, vermelho para ação imediata necessária.</p>
-                </div>
-
-                <div class="code-block">
-                    <div class="code-header">
-                        <i class="fas fa-chart-line"></i>
-                        KPI com Conditional Formatting
-                    </div>
-                    <pre><code>// Status de Performance
-Status Receita = 
-VAR PerformanceAtual = [Receita Total]
-VAR MetaMensal = 1000000
-VAR PercentualMeta = DIVIDE(PerformanceAtual, MetaMensal)
-RETURN
-SWITCH(
-    TRUE(),
-    PercentualMeta >= 1.1, "🟢 Excelente",
-    PercentualMeta >= 1.0, "🟡 Meta Atingida", 
-    PercentualMeta >= 0.9, "🟠 Atenção",
-    "🔴 Crítico"
-)
-
-// Trend Indicator
-Trend Mensal = 
-VAR ReceitaAtual = [Receita Total]
-VAR ReceitaMesAnterior = 
-CALCULATE(
-    [Receita Total],
-    DATEADD(Calendario[Data], -1, MONTH)
-)
-RETURN
-IF(
-    ReceitaAtual > ReceitaMesAnterior,
-    "↗️ Crescendo",
-    IF(
-        ReceitaAtual < ReceitaMesAnterior,
-        "↘️ Declinando",
-        "➡️ Estável"
-    )
-)</code></pre>
-                </div>
             </section>
             
             <section id="chapter7" class="section">
                 <h1>Capítulo 7: Visualizações Interativas - Storytelling com Dados</h1>
-
                 <div class="content-box">
                     <p>As <strong>Visualizações Interativas</strong> transformam dados complexos em narrativas visuais compreensíveis, permitindo exploração dinâmica e descoberta de insights através de interações intuitivas. Representam a camada de apresentação que traduz análises técnicas em informações acionáveis para diferentes stakeholders.</p>
                 </div>
-
                 <h3>Princípios de Design para Dashboards</h3>
-                <p>Um dashboard eficaz segue princípios fundamentais de design de informação e user experience:</p>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Progressive Disclosure:</strong> Apresente informações em níveis hierárquicos, do geral para o específico</li>
@@ -715,9 +537,7 @@ IF(
                         <li><strong>Performance First:</strong> Otimize para carregamento rápido e interações fluidas</li>
                     </ul>
                 </div>
-
                 <h3>Taxonomia de Visualizações para Vendas</h3>
-
                 <div class="table-container">
                     <table>
                         <thead>
@@ -768,12 +588,10 @@ IF(
                         </tbody>
                     </table>
                 </div>
-
                 <h3>Interatividade e Cross-Filtering</h3>
                 <div class="content-box highlight">
                     <p><strong>Cross-Filtering Engine:</strong> O Power BI utiliza um mecanismo sofisticado de filtros cruzados que propaga seleções entre visuais automaticamente, criando uma experiência de exploração intuitiva onde cada clique revela novas perspectivas dos dados.</p>
                 </div>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Highlight vs Filter:</strong> Configure adequadamente se interactions devem filtrar ou apenas destacar dados</li>
@@ -782,9 +600,7 @@ IF(
                         <li><strong>Bookmarks:</strong> Crie cenários pré-definidos para facilitar apresentações</li>
                     </ul>
                 </div>
-
                 <h3>Arquitetura de Interação</h3>
-
                 <div class="architecture-diagram">
                     <div class="mermaid">
                         graph TD
@@ -810,12 +626,10 @@ IF(
                             style K fill:#6B69D6,stroke:#004B87,stroke-width:2px,color:#ffffff
                     </div>
                 </div>
-
                 <h3>Otimização de Performance Visual</h3>
                 <div class="content-box success">
                     <p><strong>Rendering Optimization:</strong> Power BI otimiza automaticamente o rendering de visuais baseado na viewport e dados visíveis. Utilize técnicas como sampling para grandes datasets e considere summarization tables para agregações complexas.</p>
                 </div>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Visual Consolidation:</strong> Evite excesso de visuais por página - máximo recomendado é 6-8 visuais</li>
@@ -824,17 +638,14 @@ IF(
                         <li><strong>Mobile Optimization:</strong> Configure layouts responsivos para diferentes dispositivos</li>
                     </ul>
                 </div>
-
                 <h3>Casos de Uso Avançados</h3>
-
                 <div class="content-box important">
-                    <p><strong>Dynamic Titles e Conditional Formatting:</strong> Utilize medidas DAX para criar títulos dinâmicos e formatação condicional baseada em contexto, tornando dashboards mais informativos e visuellement impactantes.</p>
+                    <p><strong>Dynamic Titles e Conditional Formatting:</strong> Utilize medidas DAX para criar títulos dinâmicos e formatação condicional baseada em contexto, tornando dashboards mais informativos e visualmente impactantes.</p>
                 </div>
-
                 <div class="code-block">
                     <div class="code-header">
-                        <i class="fas fa-paint-brush"></i>
-                        Formatação Condicional Avançada
+                        <span><i class="fas fa-paint-brush"></i> Formatação Condicional Avançada</span>
+                        <button class="copy-btn" title="Copiar código"><i class="fas fa-copy"></i> Copiar</button>
                     </div>
                     <pre><code>// Título Dinâmico para Visual
 Título Dinâmico = 
@@ -867,12 +678,10 @@ UNICHAR(10) & "Receita: " & FORMAT([Receita Total], "R$ #,##0") &
 UNICHAR(10) & "Unidades: " & FORMAT([Qtd Vendas], "#,##0") &
 UNICHAR(10) & "Margem: " & FORMAT([Margem %], "0.0%")</code></pre>
                 </div>
-
                 <h3>Testing e Validação</h3>
                 <div class="content-box">
                     <p><strong>User Acceptance Testing:</strong> Sempre valide dashboards com usuários finais reais, testando cenários de uso típicos e casos extremos. Documente feedback e implemente melhorias iterativamente.</p>
                 </div>
-
                 <div class="professional-list">
                     <ul>
                         <li><strong>Cross-browser Testing:</strong> Valide compatibilidade em diferentes navegadores e dispositivos</li>
@@ -888,6 +697,11 @@ UNICHAR(10) & "Margem: " & FORMAT([Margem %], "0.0%")</code></pre>
     <footer class="footer">
         <p>&copy; 2025 Dashboard de Vendas - Todos os direitos reservados. | <a href="https://github.com/WebCash-inc" target="_blank">Visite nosso GitHub</a></p>
     </footer>
+
+    <!-- Botão de Retornar ao Topo -->
+    <button id="back-to-top-btn" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
     <script src="script.js"></script>
